@@ -1,0 +1,31 @@
+schema_version: 1
+
+environment:
+  name: CartPole-v1
+
+algorithm:
+  name: actor_critic
+  hyperparameters:
+    learning_rate: 0.0005
+    gamma: 0.99
+    value_coefficient: 0.5
+    entropy_coefficient: 0.01
+    hidden_layers: 2
+    hidden_size: 64
+    activation: relu
+    optimizer: adam
+
+run:
+  seed: 0
+  episodes: 200
+  max_steps_per_episode: 500
+  evaluation_episodes: 10
+  moving_average_window: 100
+
+paths:
+  experiments: experiments
+  checkpoints: checkpoints
+  results: results
+
+logging:
+  level: INFO
