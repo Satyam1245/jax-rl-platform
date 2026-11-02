@@ -1,0 +1,26 @@
+# Core ML / RL stack
+# Use the CPU-only JAX wheel which works on Windows, macOS, and Linux.
+# GPU/TPU users should replace "jax[cpu]" with "jax[cuda12]" or similar.
+jax[cpu]>=0.4.30
+optax>=0.2.3
+flax>=0.8.5
+
+# Environments
+gymnasium>=0.29.1
+
+# Numerics / data
+numpy>=1.26
+pandas>=2.0
+
+# Visualisation & UI
+plotly>=5.0
+streamlit>=1.30
+
+# Serialisation (Flax msgpack checkpoint dependency)
+protobuf>=3.20,<7
+
+# Configuration
+PyYAML>=6.0
+
+# Development / testing
+pytest>=8.0
